@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: spoopy_development
+
+test:
+  <<: *default
+  database: spoopy_test
+
+# production:
+#   <<: *default
+#   database: far-far-away_production
+#   username: far-far-away
+#   password: <%= ENV['FAR-FAR-AWAY_DATABASE_PASSWORD'] %>
